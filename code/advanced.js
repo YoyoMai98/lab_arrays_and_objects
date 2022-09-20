@@ -42,9 +42,10 @@ unitedKingdom = [
  * Q1. Add some tourist attractions to England
  */
 
-england = null;
+england = unitedKingdom[1];
+england.touristAttractions = ["Big Ben", "Tower Bridge"]
 
-// console.log(england);
+console.log(england);
 
 
 
@@ -52,22 +53,37 @@ england = null;
  * Q2. Change the capital of Wales to "Cardiff"
  */
 
-wales = null;
+wales = unitedKingdom[2];
+wales.capital = "Cardiff";
 
-// console.log(wales);
+console.log(wales);
 
 
 
 /**
  * Q3. Find a method in the documentation which will give you all of the available keys for Northern Ireland
  */
+northernIreland = unitedKingdom[3]
+northernIrelandKeys = Object.keys(northernIreland);
 
-northernIrelandKeys = null;
-
-// console.log(northernIrelandKeys);
+console.log(northernIrelandKeys);
 
 
 
 /**
  * Q4. Use an if statement to compare the population of Scotland to the other countries and print out if it is the biggest, smallest or somewhere in the middle.
  */
+scotland = unitedKingdom[0];
+if(scotland.population < england.population &&
+    scotland.population < wales.population &&
+    scotland.population < northernIreland.population
+){
+    console.log("Scotland has the lowerest population");
+}else if(scotland.population > england.population &&
+        scotland.population > wales.population &&
+        scotland.population > northernIreland.population    
+){
+    console.log("Scotland has the greatest population");
+}else{
+    console.log("Scotland population is in the middle");
+}
